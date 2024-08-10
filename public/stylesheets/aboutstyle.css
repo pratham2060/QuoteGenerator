@@ -1,6 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Playwrite+HR:wght@100..400&display=swap');
 
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
@@ -105,5 +111,76 @@ strong {
 @media (max-width: 768px) {
     .about-container {
         padding: 10px;
+    }
+}
+
+/* ----------------------Footer------------------------- */
+footer {
+    width: 100%;
+    color: #fff;
+    background-color: #222831;
+    font-family: 'Poppins', sans-serif;
+    padding: 20px 10vw; /* Adjusted padding for better spacing */
+}
+
+.footer-sec {
+    width: 100%;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: flex-start; /* Ensures even spacing between containers */
+    height: auto; /* Adjust height to fit content */
+    align-items: flex-start; /* Align items at the top */
+    gap: 100px; /* Ensure even spacing between columns */
+}
+
+.tabs {
+    margin-top: 15px;
+}
+
+footer p {
+    text-align: center;
+    margin-top: 10px; /* Added margin for spacing from the content above */
+}
+
+footer h2 {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 10px; /* Added margin for spacing below the headings */
+}
+
+footer ul {
+    padding: 0; /* Remove default padding */
+    margin: 0; /* Remove default margin */
+}
+
+footer ul li {
+    list-style: none;
+    margin-bottom: 10px; /* Add vertical spacing between list items */
+}
+
+footer ul li a {
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+    font-size: 15px;
+    cursor: pointer;
+    color: #fff;
+}
+
+footer hr {
+    border-color: #fff; /* Ensure the line is visible against the background */
+}
+
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column; /* Stack items vertically on smaller screens */
+        align-items: center;
+    }
+
+    .links, .social-link {
+        width: 100%; /* Full width on smaller screens */
+        text-align: center; /* Center the content */
     }
 }
