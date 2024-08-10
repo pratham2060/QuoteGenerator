@@ -21,3 +21,26 @@ document.addEventListener("DOMContentLoaded", function() {
     // Initially display a random quote
     displayRandomQuote();
 });
+
+// Function to copy text to clipboard
+function copyTextToClipboard(text) {
+    var tempTextarea = document.createElement('textarea');
+    tempTextarea.value = text;
+    document.body.appendChild(tempTextarea);
+    tempTextarea.select();
+    document.execCommand('copy');
+    document.body.removeChild(tempTextarea);
+    alert('Quote copied to clipboard!');
+}
+
+// Copy quote when "Copy Quote" button is clicked
+document.getElementById('copyButton').addEventListener('click', function() {
+    var quoteText = document.querySelector('.quote-lines').innerText;
+    copyTextToClipboard(quoteText);
+});
+
+// Copy quote when the quote itself is clicked
+document.querySelector('.quote-lines').addEventListener('click', function() {
+    var quoteText = this.innerText;
+    copyTextToClipboard(quoteText);
+});
