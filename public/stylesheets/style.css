@@ -283,7 +283,7 @@ footer hr {
       width: 100%;
       height: auto;
       top: auto;
-      bottom: 10px; /* Position author below quote */
+      bottom: 6.5px; /* Position author below quote */
       right: 50%;
       transform: translateX(50%);
       text-align: center;
@@ -397,7 +397,7 @@ footer hr {
       width: 100%;
       height: auto;
       top: auto;
-      bottom: 10px; /* Position author below quote */
+      bottom: 6.5px; /* Position author below quote */
       right: 50%;
       transform: translateX(50%);
       text-align: center;
