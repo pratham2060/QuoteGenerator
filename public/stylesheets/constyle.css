@@ -1,51 +1,205 @@
-/* Contact Form Styles */
-.contact-form-container {
-    width: 50vw;
-    margin: auto;
-    padding: 2rem;
-    background-color: #f9f9f9;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+/* Global Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
-.contact-form-container h2 {
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+/* Header and Navigation */
+/* -------------nav section---------- */
+
+nav{
+    /* background-color: #E7F0DC; */
+    height: 65px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    padding: 20px 0;
+}
+
+nav ul{
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+    margin-right: 40vw;
+}
+
+nav ul li {
+    list-style: none;
+    margin: 0 20px;
+}
+
+nav ul li a{
+    text-decoration: none;
+    font-family: 'Poppins',sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    cursor: pointer;
+    color: black;
+}
+
+nav h1{
+    margin-top: 6px;
+    margin-left: 5vw;
+    font-size: 30px;
+    font-family: "Playwrite HR", cursive;
+}
+
+nav a {
+    text-decoration: none;
+}
+
+nav h1 a {
+    cursor: pointer;
+    color: black;
+    text-decoration: none; /* Ensure the underline is removed */
+}
+
+nav h1 a:hover{
+    text-decoration: none; /* Remove underline on hover as well */
+    color: black
+}
+
+.links{
+    margin-left: 500px;
+}
+/* Contact Section */
+.contact-section {
+    padding: 3rem 0;
+}
+
+.contact-container {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 5px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.contact-container h1 {
     text-align: center;
     margin-bottom: 1.5rem;
-    font-family: 'Poppins', sans-serif;
 }
 
-.contact-form-container .form-group {
-    margin-bottom: 1rem;
+.form-group {
+    margin-bottom: 1.5rem;
 }
 
-.contact-form-container .form-group label {
+.form-group label {
     display: block;
+    font-weight: bold;
     margin-bottom: 0.5rem;
-    font-family: 'Poppins', sans-serif;
 }
 
-.contact-form-container .form-group input,
-.contact-form-container .form-group textarea {
+.form-group input,
+.form-group textarea {
     width: 100%;
-    padding: 0.5rem;
+    padding: 0.75rem;
     border: 1px solid #ccc;
     border-radius: 5px;
-    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    transition: border-color 0.3s;
 }
 
-.contact-form-container button {
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #9CDBA6;
+    outline: none;
+}
+
+button[type="submit"] {
     display: block;
     width: 100%;
     padding: 0.75rem;
+    background-color: #9CDBA6;
+    color: #fff;
     border: none;
     border-radius: 5px;
-    background-color: #9CDBA6;
-    font-family: 'Poppins', sans-serif;
     font-size: 1rem;
     cursor: pointer;
-    margin-top: 1rem;
+    transition: background-color 0.3s;
 }
 
-.contact-form-container button:hover {
+button[type="submit"]:hover {
     background-color: #06D001;
+}
+
+/* ----------------------Footer------------------------- */
+footer {
+    width: 100%;
+    color: #fff;
+    background-color: #222831;
+    font-family: 'Poppins', sans-serif;
+    padding: 20px 10vw; /* Adjusted padding for better spacing */
+}
+
+.footer-sec {
+    width: 100%;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: flex-start; /* Ensures even spacing between containers */
+    height: auto; /* Adjust height to fit content */
+    align-items: flex-start; /* Align items at the top */
+    gap: 100px; /* Ensure even spacing between columns */
+}
+
+.tabs {
+    margin-top: 15px;
+}
+
+footer p {
+    text-align: center;
+    margin-top: 10px; /* Added margin for spacing from the content above */
+}
+
+footer h2 {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 10px; /* Added margin for spacing below the headings */
+}
+
+footer ul {
+    padding: 0; /* Remove default padding */
+    margin: 0; /* Remove default margin */
+}
+
+footer ul li {
+    list-style: none;
+    margin-bottom: 10px; /* Add vertical spacing between list items */
+}
+
+footer ul li a {
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+    font-size: 15px;
+    cursor: pointer;
+    color: #fff;
+}
+
+footer hr {
+    border-color: #fff; /* Ensure the line is visible against the background */
+}
+
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column; /* Stack items vertically on smaller screens */
+        align-items: center;
+    }
+
+    .links, .social-link {
+        width: 100%; /* Full width on smaller screens */
+        text-align: center; /* Center the content */
+    }
 }
